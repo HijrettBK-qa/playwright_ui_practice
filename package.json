@@ -1,0 +1,22 @@
+{
+  "name": "playwright_ui_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HijrettBK-qa/playwright_ui_practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HijrettBK-qa/playwright_ui_practice/issues"
+  },
+  "homepage": "https://github.com/HijrettBK-qa/playwright_ui_practice#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  }
+}
