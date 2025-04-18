@@ -6,3 +6,6 @@ How to create a playwright project?
 3. Clone this project
 4. Install Playwright
 5. Add the file paths in gitignore file to ignore them while commiting updates
+
+6. To pull the latest changes - git pull origin blame-hijrett-qa
+
