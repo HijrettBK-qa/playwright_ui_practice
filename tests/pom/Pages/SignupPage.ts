@@ -1,6 +1,5 @@
-
 import { Page,expect } from "@playwright/test";
-import { start } from "repl";
+
 
 export default class SignupPage {
 page: Page; 
@@ -17,4 +16,7 @@ async fillPassword(password:string){await this.page.locator('[id="customer\\.pas
 async confirmPassword(password:string){await this.page.locator('#repeatedPassword').fill('Test12345!');}
 async createAccountBtn(){await this.page.getByRole('button', { name: 'Create an Account' }).click();}
 
+async verifySignUp(){
+    expect (await this.page.getByRole("alert")).toContainText(/Thank you for registering/i)
+}
 }
