@@ -30,4 +30,4 @@ export const test = base.extend<myFixtures>({  // test i "MyFixtures" olarak ext
     }
 })
 
-export { expect, APIRequestContext, Cookie } from '@playwright/test';
+export { expect, APIRequestContext, Cookie, setup } from '@playwright/test';
