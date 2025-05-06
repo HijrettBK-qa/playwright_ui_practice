@@ -18,5 +18,25 @@ setup("Create customer 1 auth", async ({ page,context }) => {
     await expect(page.locator("span.logged-in").nth(0)).toContainText('Test hbk');
     await context.storageState({path: customer1AuthFile});
     
+})
 
+
+setup("Create a user for practice", async ({ page,context }) => {
+
+    //Note for me: Find a way to use pom with it
+
+    const email = "testhbk@gmail.com";
+    const password = "Test123454321!";
+    const userPracticeAuthFile = ".auth/practiceUser.json";
+
+    await page.goto("https://practicesoftwaretesting.com/auth/login");
+    
+    await page.getByTestId("email").fill(email);
+    await page.getByTestId("password").fill(password);
+    await page.getByTestId("login-submit").click();
+
+    //login validation
+    
+    await context.storageState({path: userPracticeAuthFile});
+    
 })

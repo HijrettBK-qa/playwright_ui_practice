@@ -5,7 +5,16 @@ test('Login without auth', async({page,login}) =>{
 
     await login.login("testhbk@gmail.com","Test12345!")
     await login.verifyLogin();
+
 });
+
+test('Visual test- login without auth', async({page,login}) =>{
+
+    await login.login("testhbk@gmail.com","Test12345!")
+    await login.verifyLogin();
+    await expect(page).toHaveScreenshot("login-without-auth.png")
+});
+
 
 test.describe("Login with customer 01 auth",()=> {
     test.use({storageState: ".auth/customer01.json"});
@@ -17,6 +26,13 @@ test.describe("Login with customer 01 auth",()=> {
  
         await expect(page.title()).not.toBe("Customer Login")
     });  
+    test('Visual test- Auth validation', async({page}) =>{
+ 
+        await expect(page.title()).not.toBe("Customer Login")
+        await expect(page).toHaveScreenshot("login-wit-auth.png") //NOTE: For CI run, we need to create CI specified snapshots
+    });  
+
 
 
 })
+
