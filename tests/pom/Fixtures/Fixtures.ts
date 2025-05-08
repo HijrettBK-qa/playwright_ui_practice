@@ -1,5 +1,6 @@
 import { test as base } from '@playwright/test'; 
 import SignupPage from '../Pages/SignupPage';
+
 import LoginPage from '../Pages/LoginPage';
 import WomensPage from '../Pages/WomensPage';
 
@@ -11,6 +12,7 @@ login: LoginPage;
 womens: WomensPage;
 
 
+
 }
 // Extend base test by providing "todoPage" and "settingsPage".
 // This new "test" can be used in multiple test files, and each of them will get the fixtures.
@@ -20,6 +22,7 @@ export const test = base.extend<myFixtures>({  // test i "MyFixtures" olarak ext
   
       // set up fixture and Use the fixture value in the test.
       await use(new SignupPage(page));  //use, promise donduren bi function. that's why we use "await" here. use sayesinde, signup nesnesi cagirildigi her yerde kullanilabilir artik
+
     },
 
     login: async({page},use) =>{
@@ -31,3 +34,9 @@ export const test = base.extend<myFixtures>({  // test i "MyFixtures" olarak ext
 })
 
 export { expect, APIRequestContext, Cookie, setup } from '@playwright/test';
+
+    }
+})
+
+export { expect, APIRequestContext, Cookie } from '@playwright/test';
+

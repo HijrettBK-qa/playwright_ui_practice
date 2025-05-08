@@ -1,6 +1,7 @@
 import { test, expect } from "../Fixtures/Fixtures";
 
 
+
 test('Login without auth', async({page,login}) =>{
 
     await login.login("testhbk@gmail.com","Test12345!")
@@ -35,4 +36,9 @@ test.describe("Login with customer 01 auth",()=> {
 
 
 })
+
+
+test('Login', async({page}) =>{
+
+});
 
