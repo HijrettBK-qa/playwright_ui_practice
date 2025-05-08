@@ -7,3 +7,4 @@ node_modules/
 /playwright/.cache/
 tests-examples/demo-todo-app.spec.ts
 tests/example.spec.ts
+.auth/
